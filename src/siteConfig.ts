@@ -15,7 +15,7 @@ export const SITE = {
   },
 
   instagram: {
-    handle: 'doubledsburgers', // TODO: confirm real handle (no @)
+    handle: 'ddoubledsburgers', // no @
     // Live feed via Behold (https://behold.so). Paste the Feed ID here;
     // leave empty to show placeholder tiles that link to the profile.
     beholdFeedId: '',
