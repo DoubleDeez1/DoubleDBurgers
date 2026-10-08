@@ -7,6 +7,7 @@ import { SITE, scrollTo } from '../siteConfig';
 const links = [
   { label: 'Menu', href: '#menu' },
   { label: 'Instagram', href: '#instagram' },
+  { label: 'Catering', href: '#catering' },
   { label: 'Find Us', href: '#visit' },
 ];
 

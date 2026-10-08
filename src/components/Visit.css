@@ -1,5 +1,6 @@
 .visit {
   padding: var(--section-padding) 0;
+  background: var(--color-bg-alt);
 }
 
 .visit__grid {

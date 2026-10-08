@@ -153,3 +153,8 @@ ul {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Keep section titles clear of the sticky navbar when jumping via links */
+section[id] {
+  scroll-margin-top: 64px;
+}
