@@ -154,7 +154,7 @@ ul {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-/* Keep section titles clear of the sticky header when jumping via links */
+/* Keep section titles clear of the pinned grand opening strip when jumping via links */
 section[id] {
-  scroll-margin-top: var(--header-h, 64px);
+  scroll-margin-top: var(--header-h, 0px);
 }

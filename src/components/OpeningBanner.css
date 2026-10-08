@@ -195,8 +195,9 @@
 
 /* ---------- Slim strip that follows you down the page ---------- */
 .opening-strip {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  z-index: 150;
+  top: 0;
   left: 0;
   right: 0;
   display: flex;
