@@ -20,6 +20,12 @@ export const SITE = {
     // leave empty to show placeholder tiles that link to the profile.
     beholdFeedId: 'piIeOGhIMJgtVarqvKrf',
   },
+
+  // Banner across the top of the site. Shows until `hideFrom`, then disappears.
+  grandOpening: {
+    date: '2026-10-16', // Friday 16 October (Sydney time)
+    hideFrom: '2026-10-17T00:00:00+11:00', // midnight going into the 17th, AEDT
+  },
 };
 
 export const addressQuery = encodeURIComponent(

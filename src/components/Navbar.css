@@ -98,19 +98,23 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    position: fixed;
-    top: 64px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: 100svh;
     padding: 2rem clamp(1.25rem, 4vw, 2rem);
     background: var(--color-bg);
-    transform: translateX(100%);
-    transition: transform var(--transition-slow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: opacity var(--transition-base), transform var(--transition-slow), visibility var(--transition-base);
   }
 
   .navbar__mobile--open {
-    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .navbar__mobile ul {
