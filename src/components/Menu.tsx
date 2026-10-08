@@ -23,7 +23,7 @@ export default function Menu() {
             <Hamburger size={14} />
           </button>
         </h2>
-        <p className="section-subtitle">Full menu dropping soon. Here's a taste of what's coming.</p>
+        <p className="section-subtitle">Smashed, stacked and made fresh. Prices coming soon.</p>
 
         <div className="menu__grid">
           {MENU.map((column, ci) => (
@@ -36,7 +36,7 @@ export default function Menu() {
                       <li key={i} className="menu__item">
                         <span className="menu__name">{item.name}</span>
                         <span className="menu__dots" />
-                        <span className="menu__price">{item.price || '$—'}</span>
+                        <span className="menu__price">{item.price || 'TBA'}</span>
                         {item.description && <p className="menu__desc">{item.description}</p>}
                       </li>
                     ))}

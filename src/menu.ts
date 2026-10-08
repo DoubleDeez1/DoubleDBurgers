@@ -1,5 +1,4 @@
-// Menu items. Placeholder until the real menu is ready.
-// Leave price as '' to show "$—".
+// Menu items. Leave price as '' to show "TBA".
 
 export interface MenuItem {
   name: string;
@@ -12,34 +11,74 @@ export interface MenuGroup {
   items: MenuItem[];
 }
 
+const BUN = 'Served on a Buttery Potato Bun';
+
 export const MENU: MenuGroup[][] = [
   // Column 1
   [
     {
       title: 'Burgers',
       items: [
-        { name: 'The Double D', price: '', description: 'Two smashed patties, double cheese, house sauce.' },
-        { name: 'Classic Cheese', price: '', description: 'Description coming soon.' },
-        { name: 'Burger Name', price: '', description: 'Description coming soon.' },
-        { name: 'Burger Name', price: '', description: 'Description coming soon.' },
+        {
+          name: 'The Staple',
+          price: '',
+          description: `Smash Beef Patty · American Cheese · Diced Onion · Pickles · Crisp Lettuce · Signature Staple Sauce · ${BUN}`,
+        },
+        {
+          name: 'Sweet Heat',
+          price: '',
+          description: `Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · Drizzle of Infamous Hot Honey · Honey Soy Chicken Chip Crunch · ${BUN}`,
+        },
+        {
+          name: 'Truffle In Paradise',
+          price: '',
+          description: `Smash Beef Patty with Onion & Jalapeño · American Cheese · Grilled Pineapple · Fresh Lettuce · House-Made Truffle Mayo · ${BUN}`,
+        },
+        {
+          name: 'Cheese Please',
+          price: '',
+          description: `Smash Beef Patty · Double American Cheese · Pickles · Onion · Mustard · Ketchup · ${BUN}`,
+        },
+        {
+          name: 'Get Clucked',
+          price: '',
+          description: `Marinated Grilled Chicken Breast · American Cheese · Fresh Lettuce · House-Made Chilli Mayo · ${BUN}`,
+        },
       ],
     },
   ],
   // Column 2
   [
     {
-      title: 'Sides',
+      title: 'Fries',
       items: [
-        { name: 'Fries', price: '' },
-        { name: 'Loaded Fries', price: '' },
-        { name: 'Side Name', price: '' },
+        {
+          name: 'Chips',
+          price: '',
+          description: 'Perfectly Crisp Golden Chips · Seasoned to Perfection',
+        },
+        {
+          name: 'The Staple Loaded Fries',
+          price: '',
+          description: 'Crispy Fries · Smashed Beef Patties · American Cheese · Diced Onion · Pickles · House-Made Staple Sauce',
+        },
+        {
+          name: 'Sweet Heat Loaded Fries',
+          price: '',
+          description: 'Crispy Fries · Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · House-Made Hot Honey · Topped with a Honey Soy Chicken Chip Crunch',
+        },
       ],
     },
     {
-      title: 'Drinks',
+      title: 'Extras',
       items: [
-        { name: 'Soft Drinks', price: '' },
-        { name: 'Shakes', price: '' },
+        { name: 'Add Beef Patty', price: '' },
+        { name: 'Add Chicken Patty', price: '' },
+        {
+          name: 'Make it a Meal',
+          price: '',
+          description: 'Golden Fries · Soft Drink · Choice of Sauce',
+        },
       ],
     },
   ],
