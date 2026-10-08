@@ -46,6 +46,18 @@ export const MENU: MenuGroup[][] = [
         },
       ],
     },
+    {
+      title: 'Extras',
+      items: [
+        { name: 'Add Beef Patty', price: '' },
+        { name: 'Add Chicken Patty', price: '' },
+        {
+          name: 'Make it a Meal',
+          price: '',
+          description: 'Golden Fries · Soft Drink · Choice of Sauce',
+        },
+      ],
+    },
   ],
   // Column 2
   [
@@ -70,15 +82,28 @@ export const MENU: MenuGroup[][] = [
       ],
     },
     {
-      title: 'Extras',
+      title: 'Rice Bowls',
       items: [
-        { name: 'Add Beef Patty', price: '' },
-        { name: 'Add Chicken Patty', price: '' },
         {
-          name: 'Make it a Meal',
+          name: 'Classic Rice Bowl',
           price: '',
-          description: 'Golden Fries · Soft Drink · Choice of Sauce',
+          description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Garden Salad · Topped with Staple Sauce',
         },
+        {
+          name: 'Mexican Rice Bowl',
+          price: '',
+          description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Mexican Salsa · Hot Honey · Chipotle Sauce',
+        },
+      ],
+    },
+    {
+      title: 'Drinks',
+      items: [
+        { name: 'Coke', price: '' },
+        { name: 'Coke No Sugar', price: '' },
+        { name: 'Schweppes Lemonade', price: '' },
+        { name: 'Pepsi Max', price: '' },
+        { name: 'Water', price: '' },
       ],
     },
   ],
