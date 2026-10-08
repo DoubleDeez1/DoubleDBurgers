@@ -149,7 +149,13 @@ a { color: inherit; }
 .visit { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
 .visit__card { background: var(--card); border: 1px solid rgba(255, 217, 122, .2); border-radius: var(--radius); padding: 1.5rem; text-align: center; }
 .visit__card h3 { font-family: var(--display); font-weight: 400; font-size: 1.7rem; letter-spacing: .05em; color: var(--gold); margin: 0 0 .25rem; }
-.visit__card p { margin: 0; color: var(--muted); }
+.visit__card p { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
+.visit__card a { color: var(--text); text-decoration: none; border-bottom: 1px solid rgba(217, 166, 255, .4); }
+.visit__card a:hover { color: var(--purple); }
+.map { margin-top: 1.5rem; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(168, 85, 247, .25); }
+.map iframe { display: block; width: 100%; height: 340px; border: 0; filter: invert(90%) hue-rotate(180deg) saturate(.8); }
+.center .btn + .btn { margin-left: .75rem; }
+@media (max-width: 480px) { .center .btn + .btn { margin: .75rem 0 0; } }
 
 /* FOOTER */
 .footer {
