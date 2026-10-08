@@ -1,4 +1,5 @@
 import InstagramIcon from './InstagramIcon';
+import ShootingBurger from './ShootingBurger';
 import './Hero.css';
 import logo from '../assets/logo-neon.png';
 import { SITE, instagramUrl, scrollTo } from '../siteConfig';
@@ -7,6 +8,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero__glow" aria-hidden="true" />
+      <ShootingBurger />
       <img className="hero__logo" src={logo} alt="Double D's Burgers neon logo" width={1080} height={1080} />
       <p className="hero__tag">
         {SITE.tagline} <span className="accent">{SITE.taglineAccent}</span>
