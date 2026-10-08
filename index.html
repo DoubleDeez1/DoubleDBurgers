@@ -1,162 +1,40 @@
 <!doctype html>
-<html lang="en-AU">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Double D's Burgers</title>
-  <meta name="description" content="Double D's Burgers, 103 Hume Highway, Canley Vale. Smashed, stacked burgers. See the menu and the latest from our Instagram.">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Double D's Burgers",
-    "servesCuisine": "Burgers",
-    "telephone": "+61452053271",
-    "email": "ddoubledeezburgers@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "103 Hume Highway",
-      "addressLocality": "Canley Vale",
-      "addressRegion": "NSW",
-      "addressCountry": "AU"
-    }
-  }
-  </script>
-  <meta name="theme-color" content="#000000">
-
-  <meta property="og:title" content="Double D's Burgers">
-  <meta property="og:description" content="Burgers done right. See the menu and the latest from our Instagram.">
-  <meta property="og:image" content="assets/img/og-image.jpg">
-  <meta property="og:type" content="website">
-
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-  <header class="nav">
-    <a href="#top" class="nav__brand" aria-label="Double D's home">
-      <img src="assets/img/logo-neon.png" alt="" width="44" height="44">
-      <span>Double D's</span>
-    </a>
-    <nav class="nav__links" aria-label="Main">
-      <a href="#menu">Menu</a>
-      <a href="#instagram">Instagram</a>
-      <a href="#visit">Visit</a>
-    </nav>
-  </header>
-
-  <main id="top">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <img class="hero__logo" src="assets/img/logo-neon.png" alt="Double D's Burgers neon logo" width="1080" height="1080">
-      <p class="hero__tag">Smashed. Stacked. <span class="gold">Doubled.</span></p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#menu">See the menu</a>
-        <a class="btn btn--ghost js-ig-link" href="#instagram" target="_blank" rel="noopener">Follow on Instagram</a>
-      </div>
-    </section>
-
-    <!-- MENU (placeholder) -->
-    <section id="menu" class="section">
-      <h2 class="section__title">The <span class="gold">Menu</span></h2>
-      <p class="section__sub">Full menu dropping soon. Here's a taste of what's coming.</p>
-
-      <div class="menu">
-        <div class="menu__group">
-          <h3 class="menu__heading">Burgers</h3>
-          <ul class="menu__list">
-            <li class="menu__item"><span class="menu__name">The Double D</span><span class="menu__dots"></span><span class="menu__price">$—</span><p class="menu__desc">Two smashed patties, double cheese, house sauce.</p></li>
-            <li class="menu__item"><span class="menu__name">Classic Cheese</span><span class="menu__dots"></span><span class="menu__price">$—</span><p class="menu__desc">Description coming soon.</p></li>
-            <li class="menu__item"><span class="menu__name">Burger Name</span><span class="menu__dots"></span><span class="menu__price">$—</span><p class="menu__desc">Description coming soon.</p></li>
-            <li class="menu__item"><span class="menu__name">Burger Name</span><span class="menu__dots"></span><span class="menu__price">$—</span><p class="menu__desc">Description coming soon.</p></li>
-          </ul>
-        </div>
-
-        <div class="menu__group">
-          <h3 class="menu__heading">Sides</h3>
-          <ul class="menu__list">
-            <li class="menu__item"><span class="menu__name">Fries</span><span class="menu__dots"></span><span class="menu__price">$—</span></li>
-            <li class="menu__item"><span class="menu__name">Loaded Fries</span><span class="menu__dots"></span><span class="menu__price">$—</span></li>
-            <li class="menu__item"><span class="menu__name">Side Name</span><span class="menu__dots"></span><span class="menu__price">$—</span></li>
-          </ul>
-
-          <h3 class="menu__heading">Drinks</h3>
-          <ul class="menu__list">
-            <li class="menu__item"><span class="menu__name">Soft Drinks</span><span class="menu__dots"></span><span class="menu__price">$—</span></li>
-            <li class="menu__item"><span class="menu__name">Shakes</span><span class="menu__dots"></span><span class="menu__price">$—</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- INSTAGRAM -->
-    <section id="instagram" class="section section--alt">
-      <h2 class="section__title">Fresh off the <span class="gold">Grill</span></h2>
-      <p class="section__sub">Straight from our Instagram <a class="ig-handle js-ig-link" href="#" target="_blank" rel="noopener"></a></p>
-
-      <!-- Live feed renders here once a feed ID is set in assets/js/main.js -->
-      <div id="ig-feed" class="ig-feed"></div>
-
-      <!-- Shown until the live feed is connected -->
-      <div id="ig-fallback" class="ig-grid">
-        <a class="ig-tile js-ig-link" href="#" target="_blank" rel="noopener"><span>Follow us</span></a>
-        <a class="ig-tile js-ig-link" href="#" target="_blank" rel="noopener"></a>
-        <a class="ig-tile js-ig-link" href="#" target="_blank" rel="noopener"></a>
-        <a class="ig-tile js-ig-link" href="#" target="_blank" rel="noopener"></a>
-        <a class="ig-tile js-ig-link" href="#" target="_blank" rel="noopener"></a>
-        <a class="ig-tile js-ig-link" href="#" target="_blank" rel="noopener"></a>
-      </div>
-
-      <div class="center">
-        <a class="btn btn--primary js-ig-link" href="#" target="_blank" rel="noopener">See more on Instagram</a>
-      </div>
-    </section>
-
-    <!-- VISIT (placeholder) -->
-    <section id="visit" class="section">
-      <h2 class="section__title">Come <span class="gold">Visit</span></h2>
-      <div class="visit">
-        <div class="visit__card">
-          <h3>Where</h3>
-          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=103+Hume+Highway+Canley+Vale+NSW" target="_blank" rel="noopener">103 Hume Highway<br>Canley Vale NSW</a></p>
-        </div>
-        <div class="visit__card">
-          <h3>Contact</h3>
-          <p><a href="tel:+61452053271">0452 053 271</a><br>
-             <a href="mailto:ddoubledeezburgers@gmail.com">ddoubledeezburgers@gmail.com</a></p>
-        </div>
-      </div>
-
-      <div class="map">
-        <iframe
-          title="Map to Double D's, 103 Hume Highway, Canley Vale"
-          src="https://www.google.com/maps?q=103+Hume+Highway,+Canley+Vale+NSW&amp;output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      </div>
-
-      <div class="center">
-        <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=103+Hume+Highway+Canley+Vale+NSW" target="_blank" rel="noopener">Get directions</a>
-        <a class="btn btn--ghost" href="tel:+61452053271">Call us</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <img src="assets/img/logo-white.png" alt="" width="72" height="72">
-    <p>103 Hume Highway, Canley Vale NSW</p>
-    <p><a href="tel:+61452053271">0452 053 271</a> · <a href="mailto:ddoubledeezburgers@gmail.com">ddoubledeezburgers@gmail.com</a> · <a class="js-ig-link" href="#" target="_blank" rel="noopener">Instagram</a></p>
-    <p>&copy; <span id="year"></span> Double D's Burgers</p>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050507" />
+    <meta name="description" content="Double D's Burgers — smashed, stacked burgers from our food truck, based at 103 Hume Highway, Canley Vale. See the menu and the latest from our Instagram." />
+    <meta property="og:title" content="Double D's Burgers" />
+    <meta property="og:description" content="Smashed, stacked burgers from our food truck in Canley Vale." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:type" content="website" />
+    <title>Double D's Burgers | Smash Burger Food Truck, Canley Vale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Double D's Burgers",
+        "servesCuisine": "Burgers",
+        "telephone": "+61452053271",
+        "email": "ddoubledeezburgers@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "103 Hume Highway",
+          "addressLocality": "Canley Vale",
+          "addressRegion": "NSW",
+          "addressCountry": "AU"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

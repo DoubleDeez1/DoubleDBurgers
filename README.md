@@ -1,22 +1,29 @@
 # Double D's Burgers
 
-Website for Double D's Burgers. Plain HTML/CSS/JS, no build step, so it can be hosted free on GitHub Pages.
+Website for Double D's Burgers food truck. Built with **Vite + React 19 + TypeScript**, plain CSS per component, icons from `lucide-react`.
 
-## Structure
+## Run it
 
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build into dist/
+npm run lint
 ```
-index.html            the page
-assets/css/style.css  styles (neon purple + gold theme)
-assets/js/main.js     settings: Instagram handle + live feed ID
-assets/img/           logos and icons
-```
 
-## Editing
+## Where to edit
 
-- **Menu:** edit the `#menu` section in `index.html`. Each item is one `<li class="menu__item">`.
-- **Instagram:** set `INSTAGRAM_HANDLE` in `assets/js/main.js`.
-- **Live Instagram photos:** create a free feed at [behold.so](https://behold.so), connect the Instagram account, and paste the Feed ID into `BEHOLD_FEED_ID` in `assets/js/main.js`. Until then, placeholder tiles link to the profile.
+| What | File |
+|---|---|
+| Phone, email, address, Instagram handle, Behold feed ID | `src/siteConfig.ts` |
+| Menu items and prices | `src/menu.ts` |
+| Colours, fonts, buttons | `src/index.css` |
+| Each section | `src/components/*.tsx` + matching `.css` |
 
-## Hosting (GitHub Pages)
+### Live Instagram feed
 
-Repo **Settings → Pages → Build and deployment**: Source = *Deploy from a branch*, Branch = `main`, folder `/ (root)`. The site goes live at `https://doubledeez1.github.io/doubledburgers/`.
+Create a free feed at [behold.so](https://behold.so), connect the Instagram account, and paste the Feed ID into `instagram.beholdFeedId` in `src/siteConfig.ts`. Until then the section shows placeholder tiles linking to the profile.
+
+## Hosting (Netlify)
+
+In Netlify: **Add new site → Import an existing project → GitHub → DoubleDBurgers**. Netlify detects Vite automatically (build command `npm run build`, publish directory `dist`). Every push to `main` redeploys.

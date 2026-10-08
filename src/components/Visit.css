@@ -1,0 +1,71 @@
+.visit {
+  padding: var(--section-padding) 0;
+}
+
+.visit__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.visit__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 217, 122, 0.2);
+  border-radius: var(--radius-lg);
+}
+
+.visit__icon {
+  color: var(--color-heading);
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.7));
+}
+
+.visit__card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+}
+
+.visit__card a {
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+  transition: color var(--transition-fast);
+}
+
+.visit__card a:hover {
+  color: var(--color-heading);
+}
+
+.visit__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted) !important;
+}
+
+.visit__map {
+  margin-top: 1.5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.visit__map iframe {
+  display: block;
+  width: 100%;
+  height: 340px;
+  border: 0;
+  filter: invert(90%) hue-rotate(180deg) saturate(0.8);
+}
+
+.visit__actions {
+  margin-top: 2rem;
+}
