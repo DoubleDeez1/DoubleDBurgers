@@ -192,3 +192,94 @@
     padding: 0.15rem 0.5rem;
   }
 }
+
+/* ---------- Slim strip that follows you down the page ---------- */
+.opening-strip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 2.25rem;
+  overflow: hidden;
+  background: linear-gradient(90deg, #6D28D9, #A855F7, #F59E0B, #A855F7, #6D28D9);
+  background-size: 300% 100%;
+  box-shadow: 0 6px 18px rgba(168, 85, 247, 0.35);
+  animation: opening-flow 8s linear infinite, strip-in 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.opening-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: opening-shine 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.opening-strip__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: #FFF6D6;
+}
+
+.opening-strip__title {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.opening-strip__sep {
+  opacity: 0.7;
+}
+
+.opening-strip__chip {
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 217, 122, 0.7);
+  color: var(--color-accent);
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.opening-strip__close {
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  display: flex;
+  padding: 0.25rem;
+  border-radius: var(--radius-full);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.opening-strip__close:hover {
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+@keyframes strip-in {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 380px) {
+  .opening-strip__sep,
+  .opening-strip__body > svg {
+    display: none;
+  }
+}
