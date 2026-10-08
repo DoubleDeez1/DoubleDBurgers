@@ -1,9 +1,11 @@
 // Menu items. Leave price as '' to show "TBA".
+import theStapleImg from './assets/the-staple.webp';
 
 export interface MenuItem {
   name: string;
   price: string;
   description?: string;
+  image?: string; // optional food photo (transparent cut-out works best)
 }
 
 export interface MenuGroup {
@@ -23,6 +25,7 @@ export const MENU: MenuGroup[][] = [
           name: 'The Staple',
           price: '',
           description: `Smash Beef Patty · American Cheese · Diced Onion · Pickles · Crisp Lettuce · Signature Staple Sauce · ${BUN}`,
+          image: theStapleImg,
         },
         {
           name: 'Sweet Heat',

@@ -38,6 +38,12 @@ export default function Menu() {
                         <span className="menu__dots" />
                         <span className="menu__price">{item.price || 'TBA'}</span>
                         {item.description && <p className="menu__desc">{item.description}</p>}
+                        {item.image && (
+                          <figure className="menu__photo">
+                            <span className="menu__photo-ring" aria-hidden="true" />
+                            <img src={item.image} alt={item.name} loading="lazy" width={900} height={748} />
+                          </figure>
+                        )}
                       </li>
                     ))}
                   </ul>
