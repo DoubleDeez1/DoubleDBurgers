@@ -2,6 +2,8 @@
 import theStapleImg from './assets/the-staple.webp';
 import sweetHeatImg from './assets/sweet-heat.webp';
 import truffleImg from './assets/truffle-in-paradise.webp';
+import cheesePleaseImg from './assets/cheese-please.webp';
+import getCluckedImg from './assets/get-clucked.webp';
 
 export interface MenuItem {
   name: string;
@@ -45,11 +47,13 @@ export const MENU: MenuGroup[][] = [
           name: 'Cheese Please',
           price: '',
           description: `Smash Beef Patty · Double American Cheese · Pickles · Onion · Mustard · Ketchup · ${BUN}`,
+          image: cheesePleaseImg,
         },
         {
           name: 'Get Clucked',
           price: '',
           description: `Marinated Grilled Chicken Breast · American Cheese · Fresh Lettuce · House-Made Chilli Mayo · ${BUN}`,
+          image: getCluckedImg,
         },
       ],
     },
