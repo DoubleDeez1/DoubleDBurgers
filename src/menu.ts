@@ -1,5 +1,7 @@
 // Menu items. Leave price as '' to show "TBA".
 import theStapleImg from './assets/the-staple.webp';
+import sweetHeatImg from './assets/sweet-heat.webp';
+import truffleImg from './assets/truffle-in-paradise.webp';
 
 export interface MenuItem {
   name: string;
@@ -31,11 +33,13 @@ export const MENU: MenuGroup[][] = [
           name: 'Sweet Heat',
           price: '',
           description: `Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · Drizzle of Infamous Hot Honey · Honey Soy Chicken Chip Crunch · ${BUN}`,
+          image: sweetHeatImg,
         },
         {
           name: 'Truffle In Paradise',
           price: '',
           description: `Smash Beef Patty with Onion & Jalapeño · American Cheese · Grilled Pineapple · Fresh Lettuce · House-Made Truffle Mayo · ${BUN}`,
+          image: truffleImg,
         },
         {
           name: 'Cheese Please',

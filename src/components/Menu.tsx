@@ -41,7 +41,7 @@ export default function Menu() {
                         {item.image && (
                           <figure className="menu__photo">
                             <span className="menu__photo-ring" aria-hidden="true" />
-                            <img src={item.image} alt={item.name} loading="lazy" width={900} height={748} />
+                            <img src={item.image} alt={item.name} loading="lazy" />
                           </figure>
                         )}
                       </li>
