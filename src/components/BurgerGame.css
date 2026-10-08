@@ -1,0 +1,155 @@
+.bgame {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0px, 3vw, 2rem);
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: bgame-in 200ms ease;
+}
+
+@keyframes bgame-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.bgame__frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(560px, 100%);
+  height: min(820px, 100%);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glow-primary);
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .bgame {
+    padding: 0;
+  }
+
+  .bgame__frame {
+    height: 100%;
+    border-radius: 0;
+    border: none;
+  }
+}
+
+.bgame__hud {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.bgame__score {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+  min-width: 3ch;
+}
+
+.bgame__lives {
+  display: flex;
+  gap: 0.25rem;
+  color: rgba(255, 77, 109, 0.3);
+}
+
+.bgame__lives .is-full {
+  color: #FF4D6D;
+  fill: #FF4D6D;
+  filter: drop-shadow(0 0 4px rgba(255, 77, 109, 0.8));
+}
+
+.bgame__best {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.bgame__close {
+  display: flex;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.bgame__close:hover {
+  color: var(--color-heading);
+}
+
+.bgame__canvas {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  display: block;
+  touch-action: none;
+  cursor: grab;
+}
+
+.bgame__overlay {
+  position: absolute;
+  inset: 56px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(5, 5, 7, 0.78);
+}
+
+.bgame__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 10vw, 3.8rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--color-heading);
+  text-shadow: var(--glow-primary);
+}
+
+.bgame__rules {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 340px;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.bgame__controls {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.accent-text {
+  color: var(--color-accent);
+}
+
+.bgame__final {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+}
+
+.bgame__summary {
+  color: var(--color-text-light);
+}

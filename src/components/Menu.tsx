@@ -1,11 +1,28 @@
+import { lazy, Suspense, useState } from 'react';
+import { Hamburger } from 'lucide-react';
 import './Menu.css';
 import { MENU } from '../menu';
 
+// Easter egg: only downloaded when someone finds the tiny burger
+const BurgerGame = lazy(() => import('./BurgerGame'));
+
 export default function Menu() {
+  const [gameOpen, setGameOpen] = useState(false);
+
   return (
     <section id="menu" className="menu">
       <div className="container">
-        <h2 className="section-title">The <span className="accent">Menu</span></h2>
+        <h2 className="section-title">
+          The <span className="accent">Menu</span>
+          <button
+            className="menu__egg"
+            onClick={() => setGameOpen(true)}
+            aria-label="Play a secret burger game"
+            title="?"
+          >
+            <Hamburger size={14} />
+          </button>
+        </h2>
         <p className="section-subtitle">Full menu dropping soon. Here's a taste of what's coming.</p>
 
         <div className="menu__grid">
@@ -30,6 +47,12 @@ export default function Menu() {
           ))}
         </div>
       </div>
+
+      {gameOpen && (
+        <Suspense fallback={null}>
+          <BurgerGame onClose={() => setGameOpen(false)} />
+        </Suspense>
+      )}
     </section>
   );
 }

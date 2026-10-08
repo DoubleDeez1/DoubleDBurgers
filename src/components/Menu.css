@@ -56,3 +56,22 @@
   color: var(--color-text-muted);
   font-size: 0.92rem;
 }
+
+/* Easter egg trigger: deliberately small and quiet */
+.menu__egg {
+  display: inline-flex;
+  vertical-align: top;
+  margin-left: 0.35rem;
+  padding: 4px;
+  color: var(--color-heading);
+  opacity: 0.35;
+  border-radius: var(--radius-full);
+  transition: opacity var(--transition-base), filter var(--transition-base), transform var(--transition-base);
+}
+
+.menu__egg:hover,
+.menu__egg:focus-visible {
+  opacity: 1;
+  transform: rotate(-12deg) scale(1.2);
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.9));
+}
