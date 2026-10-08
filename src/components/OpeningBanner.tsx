@@ -42,7 +42,8 @@ export default function OpeningBanner() {
       <button className="opening__body" onClick={() => scrollTo('#visit')}>
         <PartyPopper size={20} className="opening__pop opening__pop--left" />
         <span className="opening__title">Grand Opening</span>
-        <span className="opening__date">Friday 16 October</span>
+        <span className="opening__date opening__date--long">Friday 16 October</span>
+        <span className="opening__date opening__date--short">Fri 16 Oct</span>
         <span className="opening__chip">{countdownLabel()}</span>
         <PartyPopper size={20} className="opening__pop opening__pop--right" />
       </button>

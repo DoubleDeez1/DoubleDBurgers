@@ -1,5 +1,4 @@
-import OpeningBanner from './components/OpeningBanner';
-import Navbar from './components/Navbar';
+import SiteHeader from './components/SiteHeader';
 import Hero from './components/Hero';
 import Menu from './components/Menu';
 import Instagram from './components/Instagram';
@@ -10,8 +9,7 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <>
-      <OpeningBanner />
-      <Navbar />
+      <SiteHeader />
       <Hero />
       <Menu />
       <Instagram />
