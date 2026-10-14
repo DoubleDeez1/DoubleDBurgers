@@ -5,6 +5,7 @@ import truffleImg from './assets/truffle-in-paradise.webp';
 import cheesePleaseImg from './assets/cheese-please.webp';
 import getCluckedImg from './assets/get-clucked.webp';
 import mexicanBowlImg from './assets/mexican-rice-bowl.webp';
+import classicBowlImg from './assets/classic-rice-bowl.webp';
 
 export interface MenuItem {
   name: string;
@@ -100,6 +101,7 @@ export const MENU: MenuGroup[][] = [
           name: 'Classic Rice Bowl',
           price: '',
           description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Garden Salad · Topped with Staple Sauce',
+          image: classicBowlImg,
         },
         {
           name: 'Mexican Rice Bowl',
