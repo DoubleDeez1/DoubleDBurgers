@@ -31,19 +31,82 @@
   animation-name: shooting-fly-rev;
 }
 
-/* Glowing streak behind the burger: fades from gold at the burger to nothing */
+/* ---------- Animated trail ---------- */
+/* The tail box is drawn burger-on-the-right; flipped flights mirror it. */
 .shooting__tail {
-  width: clamp(120px, 22vw, 260px);
-  height: 3px;
-  margin-right: -6px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.55) 45%, #FFD97A);
-  box-shadow: 0 0 10px rgba(255, 217, 122, 0.8), 0 0 22px rgba(168, 85, 247, 0.7);
+  position: relative;
+  width: clamp(130px, 24vw, 280px);
+  height: 24px;
+  margin-right: -8px;
 }
 
 .shooting--flip .shooting__tail {
-  margin: 0 0 0 -6px;
-  background: linear-gradient(270deg, transparent, rgba(168, 85, 247, 0.55) 45%, #FFD97A);
+  margin: 0 0 0 -8px;
+  transform: scaleX(-1);
+}
+
+/* Soft wide glow, tapered towards the far end */
+.shooting__glow {
+  position: absolute;
+  inset: 4px 0;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.55) 50%, rgba(255, 217, 122, 0.85));
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  filter: blur(5px);
+  transform-origin: right center;
+  animation: tail-grow var(--dur) ease-out forwards, tail-flicker 0.16s steps(2) infinite;
+}
+
+/* Bright core: tapered, with light ripples flowing back from the burger */
+.shooting__streak {
+  position: absolute;
+  inset: 9px 0;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 0 14px, rgba(255, 255, 255, 0.85) 20px, rgba(255, 255, 255, 0) 26px),
+    linear-gradient(90deg, transparent, rgba(192, 132, 252, 0.8) 40%, #FFD97A 85%, #fff);
+  background-size: 52px 100%, 100% 100%;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform-origin: right center;
+  animation:
+    tail-grow var(--dur) ease-out forwards,
+    tail-flow 0.28s linear infinite;
+}
+
+/* Twinkling sparks peeling off the trail */
+.shooting__spark {
+  position: absolute;
+  top: 50%;
+  right: var(--x);
+  width: var(--s);
+  height: var(--s);
+  margin-top: calc(var(--s) / -2);
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 6px var(--c), 0 0 10px var(--c), 0 0 16px rgba(168, 85, 247, 0.9);
+  opacity: 0;
+  animation: tail-spark 0.62s ease-out var(--delay) infinite;
+}
+
+@keyframes tail-grow {
+  0% { transform: scaleX(0.1); opacity: 0.3; }
+  25% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes tail-flow {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: -52px 0, 0 0; }
+}
+
+@keyframes tail-flicker {
+  0% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes tail-spark {
+  0% { transform: translate(0, 0) scale(1.4); opacity: 0; }
+  12% { opacity: 1; }
+  55% { opacity: 0.9; }
+  100% { transform: translate(-22px, var(--dy)) scale(0.2); opacity: 0; }
 }
 
 .shooting__burger {
