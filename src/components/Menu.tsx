@@ -23,7 +23,7 @@ export default function Menu() {
             <Hamburger size={14} />
           </button>
         </h2>
-        <p className="section-subtitle">Smashed, stacked and made fresh. Prices coming soon.</p>
+        <p className="section-subtitle">Smashed, stacked and made fresh.</p>
 
         <div className="menu__grid">
           {MENU.map((column, ci) => (

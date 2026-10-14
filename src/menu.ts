@@ -32,31 +32,31 @@ export const MENU: MenuGroup[][] = [
       items: [
         {
           name: 'The Staple',
-          price: '',
+          price: '$16',
           description: `Smash Beef Patty · American Cheese · Diced Onion · Pickles · Crisp Lettuce · Signature Staple Sauce · ${BUN}`,
           image: theStapleImg,
         },
         {
           name: 'Sweet Heat',
-          price: '',
+          price: '$17',
           description: `Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · Drizzle of Infamous Hot Honey · Honey Soy Chicken Chip Crunch · ${BUN}`,
           image: sweetHeatImg,
         },
         {
           name: 'Truffle In Paradise',
-          price: '',
+          price: '$18',
           description: `Smash Beef Patty with Onion & Jalapeño · American Cheese · Grilled Pineapple · Fresh Lettuce · House-Made Truffle Mayo · ${BUN}`,
           image: truffleImg,
         },
         {
           name: 'Cheese Please',
-          price: '',
+          price: '$18',
           description: `Smash Beef Patty · Double American Cheese · Pickles · Onion · Mustard · Ketchup · ${BUN}`,
           image: cheesePleaseImg,
         },
         {
           name: 'Get Clucked',
-          price: '',
+          price: '$16',
           description: `Marinated Grilled Chicken Breast · American Cheese · Fresh Lettuce · House-Made Chilli Mayo · ${BUN}`,
           image: getCluckedImg,
         },
@@ -65,13 +65,14 @@ export const MENU: MenuGroup[][] = [
     {
       title: 'Extras',
       items: [
-        { name: 'Add Beef Patty', price: '' },
-        { name: 'Add Chicken Patty', price: '' },
+        { name: 'Add Beef Patty', price: '$4' },
+        { name: 'Add Chicken Fillet', price: '$4' },
         {
           name: 'Make it a Meal',
-          price: '',
-          description: 'Golden Fries · Soft Drink · Choice of Sauce',
+          price: '$7',
+          description: 'Golden Fries · Soft Drink',
         },
+        { name: 'Add a Sauce', price: '$2' },
       ],
     },
   ],
@@ -82,19 +83,19 @@ export const MENU: MenuGroup[][] = [
       items: [
         {
           name: 'Chips',
-          price: '',
+          price: '$5',
           description: 'Perfectly Crisp Golden Chips · Seasoned to Perfection',
           image: chipsImg,
         },
         {
           name: 'The Staple Loaded Fries',
-          price: '',
+          price: '$18',
           description: 'Crispy Fries · Smashed Beef Patties · American Cheese · Diced Onion · Pickles · House-Made Staple Sauce',
           image: stapleFriesImg,
         },
         {
           name: 'Sweet Heat Loaded Fries',
-          price: '',
+          price: '$18',
           description: 'Crispy Fries · Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · House-Made Hot Honey · Topped with a Honey Soy Chicken Chip Crunch',
           image: sweetHeatFriesImg,
         },
@@ -105,13 +106,13 @@ export const MENU: MenuGroup[][] = [
       items: [
         {
           name: 'Classic Rice Bowl',
-          price: '',
+          price: '$18',
           description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Garden Salad · Topped with Staple Sauce',
           image: classicBowlImg,
         },
         {
           name: 'Mexican Rice Bowl',
-          price: '',
+          price: '$18',
           description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Mexican Salsa · Hot Honey · Chipotle Sauce',
           image: mexicanBowlImg,
         },
@@ -120,11 +121,11 @@ export const MENU: MenuGroup[][] = [
     {
       title: 'Drinks',
       items: [
-        { name: 'Coke', price: '' },
-        { name: 'Coke No Sugar', price: '' },
-        { name: 'Schweppes Lemonade', price: '' },
-        { name: 'Pepsi Max', price: '' },
-        { name: 'Water', price: '' },
+        { name: 'Coke', price: '$3' },
+        { name: 'Coke No Sugar', price: '$3' },
+        { name: 'Schweppes Lemonade', price: '$3' },
+        { name: 'Pepsi Max', price: '$3' },
+        { name: 'Water', price: '$3' },
       ],
     },
   ],
