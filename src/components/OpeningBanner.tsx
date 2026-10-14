@@ -2,6 +2,7 @@ import type { Ref } from 'react';
 import { PartyPopper, X } from 'lucide-react';
 import './OpeningBanner.css';
 import { scrollTo } from '../siteConfig';
+import { OPENING_DATE_LONG, OPENING_DATE_SHORT } from '../hooks/useGrandOpening';
 
 const SPARKS = Array.from({ length: 14 }, (_, i) => i);
 
@@ -22,8 +23,8 @@ export default function OpeningBanner({ label, onDismiss, ref }: Props) {
       <button className="opening__body" onClick={() => scrollTo('#visit')}>
         <PartyPopper size={20} className="opening__pop opening__pop--left" />
         <span className="opening__title">Grand Opening</span>
-        <span className="opening__date opening__date--long">Friday 16 October</span>
-        <span className="opening__date opening__date--short">Fri 16 Oct</span>
+        <span className="opening__date opening__date--long">{OPENING_DATE_LONG}</span>
+        <span className="opening__date opening__date--short">{OPENING_DATE_SHORT}</span>
         <span className="opening__chip">{label}</span>
         <PartyPopper size={20} className="opening__pop opening__pop--right" />
       </button>
@@ -43,7 +44,7 @@ export function OpeningStrip({ label, onDismiss }: Omit<Props, 'ref'>) {
         <PartyPopper size={14} />
         <span className="opening-strip__title">Grand Opening</span>
         <span className="opening-strip__sep" aria-hidden="true">·</span>
-        <span>Fri 16 Oct</span>
+        <span>{OPENING_DATE_SHORT}</span>
         <span className="opening-strip__chip">{label}</span>
       </button>
       <button className="opening-strip__close" onClick={onDismiss} aria-label="Hide announcement">

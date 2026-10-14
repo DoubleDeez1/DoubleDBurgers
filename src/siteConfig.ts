@@ -23,8 +23,8 @@ export const SITE = {
 
   // Banner across the top of the site. Shows until `hideFrom`, then disappears.
   grandOpening: {
-    date: '2026-10-16', // Friday 16 October (Sydney time)
-    hideFrom: '2026-10-17T00:00:00+11:00', // midnight going into the 17th, AEDT
+    date: '2026-10-17', // Saturday 17 October (Sydney time). Banner text and countdown use this.
+    hideFrom: '2026-10-18T00:00:00+11:00', // midnight going into the 18th, AEDT
   },
 };
 

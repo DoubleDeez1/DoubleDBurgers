@@ -3,6 +3,16 @@ import { SITE } from '../siteConfig';
 
 const hideFrom = new Date(SITE.grandOpening.hideFrom).getTime();
 
+// Opening date as text, e.g. "Saturday 17 October" and "Sat 17 Oct"
+const openingDay = new Date(`${SITE.grandOpening.date}T12:00:00+11:00`);
+const fmt = (opts: Intl.DateTimeFormatOptions) => {
+  const parts = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', ...opts }).formatToParts(openingDay);
+  const get = (type: string) => (parts.find(p => p.type === type)?.value ?? '').replace(/[.,]/g, '');
+  return `${get('weekday')} ${get('day')} ${get('month')}`;
+};
+export const OPENING_DATE_LONG = fmt({ weekday: 'long', day: 'numeric', month: 'long' });
+export const OPENING_DATE_SHORT = fmt({ weekday: 'short', day: 'numeric', month: 'short' });
+
 // Today's date in Sydney as YYYY-MM-DD, regardless of the visitor's timezone
 const sydneyToday = () =>
   new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' }).format(new Date());
