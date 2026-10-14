@@ -6,6 +6,7 @@ import cheesePleaseImg from './assets/cheese-please.webp';
 import getCluckedImg from './assets/get-clucked.webp';
 import mexicanBowlImg from './assets/mexican-rice-bowl.webp';
 import classicBowlImg from './assets/classic-rice-bowl.webp';
+import stapleFriesImg from './assets/staple-loaded-fries.webp';
 
 export interface MenuItem {
   name: string;
@@ -86,6 +87,7 @@ export const MENU: MenuGroup[][] = [
           name: 'The Staple Loaded Fries',
           price: '',
           description: 'Crispy Fries · Smashed Beef Patties · American Cheese · Diced Onion · Pickles · House-Made Staple Sauce',
+          image: stapleFriesImg,
         },
         {
           name: 'Sweet Heat Loaded Fries',
