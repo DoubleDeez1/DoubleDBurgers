@@ -7,6 +7,8 @@ import getCluckedImg from './assets/get-clucked.webp';
 import mexicanBowlImg from './assets/mexican-rice-bowl.webp';
 import classicBowlImg from './assets/classic-rice-bowl.webp';
 import stapleFriesImg from './assets/staple-loaded-fries.webp';
+import chipsImg from './assets/chips.webp';
+import sweetHeatFriesImg from './assets/sweet-heat-loaded-fries.webp';
 
 export interface MenuItem {
   name: string;
@@ -82,6 +84,7 @@ export const MENU: MenuGroup[][] = [
           name: 'Chips',
           price: '',
           description: 'Perfectly Crisp Golden Chips · Seasoned to Perfection',
+          image: chipsImg,
         },
         {
           name: 'The Staple Loaded Fries',
@@ -93,6 +96,7 @@ export const MENU: MenuGroup[][] = [
           name: 'Sweet Heat Loaded Fries',
           price: '',
           description: 'Crispy Fries · Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · House-Made Hot Honey · Topped with a Honey Soy Chicken Chip Crunch',
+          image: sweetHeatFriesImg,
         },
       ],
     },
