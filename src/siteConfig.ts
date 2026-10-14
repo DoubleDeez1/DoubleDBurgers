@@ -2,8 +2,8 @@
 
 export const SITE = {
   name: "Double D's Burgers",
-  tagline: 'Smashed. Stacked.',
-  taglineAccent: 'Doubled.',
+  tagline: 'Double Up on',
+  taglineAccent: 'Delicious',
 
   phone: '0452 053 271',
   phoneHref: 'tel:+61452053271',
