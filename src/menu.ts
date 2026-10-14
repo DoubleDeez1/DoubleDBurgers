@@ -4,6 +4,7 @@ import sweetHeatImg from './assets/sweet-heat.webp';
 import truffleImg from './assets/truffle-in-paradise.webp';
 import cheesePleaseImg from './assets/cheese-please.webp';
 import getCluckedImg from './assets/get-clucked.webp';
+import mexicanBowlImg from './assets/mexican-rice-bowl.webp';
 
 export interface MenuItem {
   name: string;
@@ -104,6 +105,7 @@ export const MENU: MenuGroup[][] = [
           name: 'Mexican Rice Bowl',
           price: '',
           description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Mexican Salsa · Hot Honey · Chipotle Sauce',
+          image: mexicanBowlImg,
         },
       ],
     },
