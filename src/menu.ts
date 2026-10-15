@@ -68,6 +68,7 @@ export const MENU: MenuGroup[][] = [
       items: [
         { name: 'Extra Protein', price: '$4', description: 'Beef Patty or Chicken Fillet' },
         { name: 'Make It a Meal', price: '$7', description: 'Golden Fries · Soft Drink' },
+        { name: 'Add a Sauce', price: '$2' },
       ],
     },
   ],
