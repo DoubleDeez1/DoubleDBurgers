@@ -37,6 +37,11 @@ export default function Menu() {
                         <span className="menu__name">{item.name}</span>
                         <span className="menu__dots" />
                         <span className="menu__price">{item.price || 'TBA'}</span>
+                        {item.tags && (
+                          <span className="menu__tags">
+                            {item.tags.map(t => <span key={t} className="menu__tag">{t}</span>)}
+                          </span>
+                        )}
                         {item.description && <p className="menu__desc">{item.description}</p>}
                         {item.image && (
                           <figure className="menu__photo">

@@ -136,3 +136,23 @@
   0%, 100% { transform: translateY(0) rotate(-1deg); }
   50% { transform: translateY(-6px) rotate(1deg); }
 }
+
+/* Small badges under an item name, e.g. calories and protein */
+.menu__tags {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.1rem 0 0.2rem;
+}
+
+.menu__tag {
+  padding: 0.1rem 0.55rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 217, 122, 0.45);
+  background: rgba(255, 217, 122, 0.08);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

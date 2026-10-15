@@ -14,6 +14,7 @@ export interface MenuItem {
   name: string;
   price: string;
   description?: string;
+  tags?: string[]; // small badges under the name, e.g. calories / protein
   image?: string; // optional food photo (transparent cut-out works best)
 }
 
@@ -33,17 +34,17 @@ export const MENU: MenuGroup[][] = [
         {
           name: 'The Staple',
           price: '$16',
-          description: `Smash Beef Patty · American Cheese · Diced Onion · Pickles · Crisp Lettuce · Signature Staple Sauce · ${BUN}`,
+          description: `Smash Beef Patty · American Cheese · Onion · Dill Pickles · Crisp Lettuce · House-Made Staple Sauce · ${BUN}`,
           image: theStapleImg,
         },
         {
           name: 'Sweet Heat',
           price: '$17',
-          description: `Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · Drizzle of Infamous Hot Honey · Honey Soy Chicken Chip Crunch · ${BUN}`,
+          description: `Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · Infamous Hot Honey Drizzle · Honey Soy Chicken Chip Crunch · ${BUN}`,
           image: sweetHeatImg,
         },
         {
-          name: 'Truffle In Paradise',
+          name: 'Truffle in Paradise',
           price: '$18',
           description: `Smash Beef Patty with Onion & Jalapeño · American Cheese · Grilled Pineapple · Fresh Lettuce · House-Made Truffle Mayo · ${BUN}`,
           image: truffleImg,
@@ -51,7 +52,7 @@ export const MENU: MenuGroup[][] = [
         {
           name: 'Cheese Please',
           price: '$18',
-          description: `Smash Beef Patty · Double American Cheese · Pickles · Onion · Mustard · Ketchup · ${BUN}`,
+          description: `Smash Beef Patty · Double American Cheese · Dill Pickles · Onion · Mustard · Ketchup · ${BUN}`,
           image: cheesePleaseImg,
         },
         {
@@ -65,14 +66,8 @@ export const MENU: MenuGroup[][] = [
     {
       title: 'Extras',
       items: [
-        { name: 'Add Beef Patty', price: '$4' },
-        { name: 'Add Chicken Fillet', price: '$4' },
-        {
-          name: 'Make it a Meal',
-          price: '$7',
-          description: 'Golden Fries · Soft Drink',
-        },
-        { name: 'Add a Sauce', price: '$2' },
+        { name: 'Extra Protein', price: '$4', description: 'Beef Patty or Chicken Fillet' },
+        { name: 'Make It a Meal', price: '$7', description: 'Golden Fries · Soft Drink' },
       ],
     },
   ],
@@ -82,21 +77,26 @@ export const MENU: MenuGroup[][] = [
       title: 'Fries',
       items: [
         {
-          name: 'Chips',
+          name: 'Fries',
           price: '$5',
           description: 'Perfectly Crisp Golden Chips · Seasoned to Perfection',
           image: chipsImg,
         },
+      ],
+    },
+    {
+      title: 'Loaded Fries',
+      items: [
         {
           name: 'The Staple Loaded Fries',
           price: '$18',
-          description: 'Crispy Fries · Smashed Beef Patties · American Cheese · Diced Onion · Pickles · House-Made Staple Sauce',
+          description: 'Crispy Fries · Smashed Beef Patties · American Cheese · Onion · Dill Pickles · House-Made Staple Sauce',
           image: stapleFriesImg,
         },
         {
           name: 'Sweet Heat Loaded Fries',
           price: '$18',
-          description: 'Crispy Fries · Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · House-Made Hot Honey · Topped with a Honey Soy Chicken Chip Crunch',
+          description: 'Crispy Fries · Marinated Grilled Chicken Breast · American Cheese · In-House Slaw · House-Made Chipotle Mayo · House-Made Hot Honey · Topped with Honey Soy Chicken Chip Crunch',
           image: sweetHeatFriesImg,
         },
       ],
@@ -107,13 +107,15 @@ export const MENU: MenuGroup[][] = [
         {
           name: 'Classic Rice Bowl',
           price: '$18',
-          description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Garden Salad · Topped with Staple Sauce',
+          tags: ['660 Calories', '68g Protein'],
+          description: '200 g Jasmine Rice · 200 g Marinated Grilled Chicken Breast · Fresh Cucumber Salad · Topped with House-Made Staple Sauce',
           image: classicBowlImg,
         },
         {
           name: 'Mexican Rice Bowl',
           price: '$18',
-          description: '200g Jasmine Rice · 200g Marinated Grilled Chicken Breast · Mexican Salsa · Hot Honey · Chipotle Sauce',
+          tags: ['700 Calories', '71g Protein'],
+          description: '200 g Jasmine Rice · 200 g Marinated Grilled Chicken Breast · Corn Salsa · Infamous Hot Honey · House-Made Chipotle Mayo',
           image: mexicanBowlImg,
         },
       ],
